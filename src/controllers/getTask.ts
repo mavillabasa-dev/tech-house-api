@@ -21,7 +21,7 @@ export const getAllTask = async (req: Request, res: Response): Promise<void> => 
       totalTodos,
     });
   } catch (error) {
-    res.status(500).json({ message: "Error fetching films data", error });
+    res.status(500).json({ message: "Error fetching data", error });
   }
 };
 

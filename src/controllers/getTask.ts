@@ -15,7 +15,7 @@ export const getAllTask = async (req: Request, res: Response): Promise<void> => 
     const totalTodos = await Todo.countDocuments();
 
     res.status(200).json({
-      todos: todos.slice(0,3),
+      todos,
       currentPage: page,
       totalPages: Math.ceil(totalTodos / limit),
       totalTodos,
